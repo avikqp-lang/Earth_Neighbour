@@ -4,6 +4,186 @@
     <meta charset="UTF-8" />
     <title>About – Earth Neighbour</title>
     <link rel="stylesheet" href="Styles/stylesA.css">
+    <style>
+           /* Background Theme */
+        body {
+            margin: 0;
+            font-family: Poppins, sans-serif;
+            background: #0d1b2a; /* Same dark blue theme */
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        nav {
+            width: 90vw;
+            padding: 0px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #0b1623;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .logo-area img {
+            width: 67px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 50px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            transition: 0.2s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #2ecc71;
+        }
+
+        /* MAIN ABOUT SECTION */
+        .about-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 150px 80px 60px;
+            min-height: 100vh;
+        }
+
+        .about-text {
+            width: 50%;
+        }
+
+        .about-text h1 {
+            font-size: 54px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            opacity: 0.9;
+        }
+
+        .about-image {
+            width: 55%;
+            display: flex;
+            justify-content: right;
+            margin-top: -30vh ;
+        }
+
+        .about-image img {
+            width: 40vw;
+        }
+
+        /* FILL LEVEL INDICATOR (Same UI as Home Page) */
+       .fill-indicator {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    text-align: center;
+}
+
+.circle {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 6px solid #10b981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.fill-indicator p {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+/* FOOTER */
+.footer {
+    width: 100%;
+    margin-top: 80px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    padding: 40px 50px 25px;
+    color: #d1d5db;
+    box-shadow: 0 -10px 25px rgba(0,255,180,0.05);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section h3 {
+    color: #10b981;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.footer-section p {
+    font-size: 15px;
+    margin-bottom: 6px;
+    opacity: 0.85;
+}
+
+.footer-bottom {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.65;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 15px;
+}
+
+/* Footer responsive */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+ @media (max-width: 900px) { 
+    .about-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    .about-text {
+        max-width: 100%;
+    }
+    
+    .about-image {
+        width: 300px;
+    }
+}
+
+    </style>
     
 
 </head>
@@ -89,3 +269,4 @@ Our goal is to spread awareness about maintaining hygiene and managing waste eff
 
 </body>
 </html>
+
