@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Eco Tokens – SmartBin</title>
+
+<!-- Using YOUR THEME (internal CSS adjusted to match uploaded style.css) -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #1f2937, #111827);
+        color: white;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* NAVIGATION SAME THEME */
+ nav {
+    width: 100%;
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 750
+}
+.logot{
+    font-size: larger ;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 75px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #d1d5db;
+    font-size: 17px;
+    transition: 0.3s ease;
+}
+
+nav li a:hover,
+        nav li a.active {
+            color: #2ecc71;
+        }
+    /* MAIN TOKEN BOX */
+    .token-container {
+        margin-top: 140px;
+        width: 80%;
+        max-width: 900px;
+        background: rgba(255,255,255,0.04);
+        border-radius: 20px;
+        padding: 40px;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 0 25px rgba(0,255,180,0.15);
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .token-title {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #10b981;
+    }
+
+    .token-sub {
+        font-size: 17px;
+        opacity: 0.8;
+        margin-bottom: 35px;
+    }
+
+    /* TOKEN CIRCLE */
+    .token-circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: auto;
+        background: rgba(0,0,0,0.4);
+        border: 8px solid #10b981;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 55px;
+        font-weight: bold;
+        box-shadow: 0 0 20px rgba(0,255,180,0.4);
+        backdrop-filter: blur(10px);
+    }
+
+    .token-label {
+        font-size: 18px;
+        margin-top: 12px;
+        opacity: 0.8;
+    }
+
+    /* INFO BOX */
+    .info {
+        margin-top: 35px;
+        font-size: 17px;
+        opacity: 0.85;
+        line-height: 1.7;
+    }
+
+    /* BUTTON */
+    .redeem-btn {
+        margin-top: 30px;
+        padding: 14px 30px;
+        border: none;
+        border-radius: 8px;
+        background: #10b981;
+        color: black;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .redeem-btn:hover {
+        background: #0fa672;
+        transform: translateY(-2px);
+    }
+    /* Live Fill Indicator */
+.fill-indicator {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    text-align: center;
+}
+
+.circle {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 6px solid #10b981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.fill-indicator p {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+    /* FOOTER */
+.footer {
+    width: 100%;
+    margin-top: 80px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    padding: 40px 50px 25px;
+    color: #d1d5db;
+    box-shadow: 0 -10px 25px rgba(0,255,180,0.05);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section h3 {
+    color: #10b981;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.footer-section p {
+    font-size: 15px;
+    margin-bottom: 6px;
+    opacity: 0.85;
+}
+
+.footer-bottom {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.65;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 15px;
+}
+
+/* Footer responsive */
+@media (max-width: 800px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+        <h2>SmartBin</h2>
+    </div>
+
+    <div class="nav-links">
+         <li><a  href="index.html">Home</a></li>
+            <li><a  href="abouttrash.html">About</a></li>
+            <li><a href="prototype.html">Prototype</a></li>
+            <li><a href="Tokens.html">Rewards</a></li>
+    </div>
+</nav>
+
+<!-- TOKEN PAGE MAIN UI -->
+<div class="token-container">
+
+    <div class="token-title">Your Eco Tokens</div>
+    <div class="token-sub">Earn rewards by generating compost using SmartBin</div>
+
+    <div class="token-circle">128</div>
+    <div class="token-label">Tokens Earned</div>
+
+    <p class="info">
+        SmartBin automatically tracks your compost generation and converts it into 
+        **Eco Tokens**. These tokens can be exchanged for digital rewards, school credits, 
+        community points, or discount vouchers.
+        <br><br>
+        The more compost you produce, the more tokens you earn — making sustainability fun!
+    </p>
+
+    <button class="redeem-btn">Redeem Tokens</button>
+</div>
+<div class="fill-indicator">
+        <div class="circle">45%</div>
+        <p>Live Fill Level</p>
+    </div>
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>SmartBin</h3>
+            <p>Turning waste into value through technology and sustainability.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: support@smartbin.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Location: Earth Neighbour Labs</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Follow</h3>
+            <p>Instagram: @smartbin_official</p>
+            <p>Website: www.smartbin.in</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 SmartBin · All Rights Reserved
+    </div>
+</footer>
+
+</body>
+</html>
